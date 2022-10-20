@@ -1,0 +1,12 @@
+module MUX81bh(Y,I0,I1,I2,I3,I4,I5,I6,I7,S0,S1,S2);
+input I0,I1,I2,I3,I4,I5,I6,I7,S0,S1,S2;
+output Y;
+wire W1,W2;
+
+MUX41g m1(W1,I0,I1,I2,I3,S0,S1);
+
+MUX41g m2(W2,I4,I5,I6,I7,S0,S1);
+
+MUX21 m3(Y,W1,W2,S2);
+
+endmodule
